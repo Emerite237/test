@@ -8,7 +8,7 @@
   "scripts": {
     "ng": "ng",
     "install-force": "npm install --force",
-    "start": "node serveur.js",
+    "start": "npm install --force && node serveur.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
