@@ -1,0 +1,88 @@
+<section class="fond mt-10 mb-10 ">
+    <div class="container p-5">
+        <div data-aos="zoom-in"  data-aos-duration="3000" class="row">
+            <div class="col-12  text-center">              
+              <h3 class="fw-bold" > <br> Mes Formations <br></h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="formation">
+    <div class="container ">
+        <div class="row">
+            <div class="col-10 col-md-6 col-lg-4 heartbeat " *ngFor="let repertoire of repertoires" >
+                 <div class="card my-4 puff-in-br " style="width: 18rem;" >
+                      <div class="card-header text-center" style="background-color: #F31111;" >
+                        <strong>{{repertoire.titre | uppercase}}</strong>
+                      </div>
+                      <div  *ngFor="let img of images ; let i = index">
+                        <div *ngIf="repertoire.id_repertoire===img.id_repertoire"> 
+                          <img class="card-img-top img-fluid " style="height: 200px;" src="http://{{img.path}}" alt="Card image cap" (click)="onViewFormation(repertoire.id_repertoire)">                         <!-- <img src="./{{img.path}}" class="card-img-top" alt="..." (click)="onViewFormation(formation.id_formation)"  >   --> 
+
+                        </div>
+                      </div>
+                         <div class="card-body" >
+                        <p class="card-text">{{repertoire.description | uppercase}} </p>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+   
+</section>
+
+
+
+
+<!--
+   <div class="card my-4" style="width: 18rem;">
+                      <div class="card-header text-center" style="background-color: #F31111;">
+                          titre
+                      </div>
+                      <img src="/assets/Visa.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                  </div>
+   <div class="col">
+                <div class="card my-4" style="width: 18rem;">
+                    <div class="card-header text-center" style="background-color: #F31111;">
+                        titre
+                    </div>
+                    <img src="/assets/Visa.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                  <div class="card my-4" style="width: 18rem;">
+                    <div class="card-header text-center" style="background-color: #F31111;">
+                        titre
+                    </div>
+                    <img src="/assets/Visa.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+ <div class="col">
+                <div class="card my-4" style="width: 18rem;">
+                    <div class="card-header text-center" style="background-color: #F31111;">
+                        titre
+                    </div>
+                    <img src="/assets/Visa.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card my-4" style="width: 18rem;">
+                    <div class="card-header text-center" style="background-color: #F31111;">
+                        titre
+                    </div>
+                    <img src="/assets/Visa.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+
+-->
