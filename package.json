@@ -7,8 +7,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "install-force": "npm install --force",
-    "start": "npm install --legacy-peer-deps && node serveur.js",
+    "install": "npm install --force",
+    "start": "npm install --force && node serveur.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
